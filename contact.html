@@ -66,10 +66,25 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p class="small">JURBY Naravna energijska pijača</p>
-    </div>
-  </footer>
+ <footer class="site-footer">
+	  <div class="container footer-grid">
+		<div>
+		  <strong class="highlight">Jurby</strong>
+		  <p class="small">
+			Dijaški projekt naravne energijske pijače za boljšo zbranost,
+			sodoben življenjski slog in odgovorno izbiro.
+		  </p>
+		</div>
+		<p>
+		<div>
+		  <p class="small">
+			© <span id="year"></span> Jurby. Vse pravice pridržane.
+		  </p>
+		</div>
+	  </div>
+</footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

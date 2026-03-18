@@ -63,10 +63,25 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p class="small">Jurby predstavlja energijo, ki izhaja iz narave, znanja in mladostne ustvarjalnosti.</p>
-    </div>
-  </footer>
+<footer class="site-footer">
+	  <div class="container footer-grid">
+		<div>
+		  <strong class="highlight">Jurby</strong>
+		  <p class="small">
+			Jurby predstavlja energijo, ki izhaja iz narave, znanja in mladostne ustvarjalnosti.
+		  </p>
+		</div>
+		<p>
+		<div>
+		  <p class="small">
+			© <span id="year"></span> Jurby. Vse pravice pridržane.
+		  </p>
+		</div>
+	  </div>
+</footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
