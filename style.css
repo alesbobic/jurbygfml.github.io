@@ -407,3 +407,77 @@ a {
     font-size: 0.95rem;
   }
 }
+
+.team-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 140px));
+  justify-content: start; /* 🔥 to je to */
+
+.team-member {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+}
+
+.team-member img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  border: 4px solid #ece7e2;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.team-member:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.72);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.14);
+}
+
+.member-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  border-radius: 50%;
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.team-member:hover .member-overlay {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .team-gallery {
+    grid-template-columns: repeat(3, minmax(110px, 130px));
+    gap: 20px;
+  }
+
+  .team-member {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 640px) {
+  .team-gallery {
+    grid-template-columns: repeat(2, minmax(100px, 120px));
+    gap: 18px;
+  }
+
+  .team-member {
+    width: 120px;
+    height: 120px;
+  }
+}
